@@ -1,0 +1,248 @@
+:root {
+    --primary: #76EC01;
+    --bg: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    z-index: 5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    border-bottom: 1px solid #76EC01;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 7%;
+    background-color: #ffffffe0;
+    z-index: 100;
+}
+.navbar .navbar-logo {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: #000;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+    color: var(--primary);
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: #000;
+}
+
+.navbar .navbar-nav a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid #000;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+#burger-menu {
+    display: none;
+}
+
+.navbar button {
+    background-color: var(--primary);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5rem;
+    border: none;
+}
+
+.navbar button a {
+    color: #fff;
+}
+
+.navbar button a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.navbar .navbar-nav #instagram,
+.navbar .navbar-nav #facebook {
+    display: none;
+}
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(
+    0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255, 0) 50%
+    ), url(../img/orang-pakai-smartwatch-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.hero .content {
+    padding: 1.4rem 7%;
+    max-width: 100rem;
+    margin-top: 20rem;
+}
+
+.hero .content h1 {
+    display: absolute;
+    font-size: 5em;
+    color: #fff;
+    line-height: 1.1;
+}
+
+.hero .content h1 span {
+    color: var(--primary);
+    text-shadow: 1px 1px 1px rgba(1, 1, 2, 0.7);
+}
+
+.hero .content p {
+    margin-top: 1.3rem;
+    font-size: 27px;
+    width: 100%;
+    text-align: left;
+}
+
+.hero .content .cta {
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 5rem;
+    font-weight: 700;
+}
+
+.hero .content .cta:hover {
+    color: #000;
+}
+
+
+
+
+
+/* media queries */
+
+@media (max-width: 1040px) {
+    html {
+        font-size: 63.2%;
+    }
+
+    #burger-menu {
+        display: inline-block;
+    }
+
+
+    .navbar button {
+        display: none;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 33rem;
+        height: 100vh;
+        transition: 0.3s ease-in-out;
+        z-index: 4;
+        box-shadow: -5px 15px 30px #0000006b;
+        border-radius: 20px 0px 0px 0px;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 1;
+    }
+
+    .navbar .navbar-nav a {
+        color: var(--primary);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .navbar .navbar-nav #instagram,
+    .navbar .navbar-nav #facebook {
+        display: inline-block;
+        padding: 0.5rem;
+        
+    }
+
+    .navbar .navbar-nav #instagram:hover::after,
+    .navbar .navbar-nav #facebook:hover::after {
+        display: none;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+    }
+
+    .hero .content .cta {
+        font-size: 2rem;
+    }
+
+    .hero .content p {
+        display: none;
+    }
+
+    .hero .content {
+        margin-top: 50rem;
+    }
+
+
+
+
+
+
+}
+    
