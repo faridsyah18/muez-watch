@@ -168,6 +168,7 @@ body {
 
 /* media queries */
 
+/* tablet */
 @media (max-width: 1040px) {
     html {
         font-size: 63.2%;
@@ -238,11 +239,11 @@ body {
     .hero .content {
         margin-top: 50rem;
     }
-
-
-
-
-
-
 }
-    
+/* Phone */
+
+@media (max-width: 720px) {
+    html {
+        font-size: 40.2%;
+    }
+}
